@@ -9,7 +9,7 @@ export const NotFound = () => {
         flexDirection: "column",
         alignItems: "center",
         flex: "1",
-        height: "100%",
+        height: "80vh",
       }}
     >
       <Typography variant="h1" style={{ color: "white" }}>

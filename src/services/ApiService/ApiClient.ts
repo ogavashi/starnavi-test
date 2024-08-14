@@ -70,14 +70,15 @@ export default class ApiClient {
         body: JSON.stringify(body),
       });
 
-      if (response.ok) {
-        const data = await response.json();
+      const data = await response.json();
 
+      if (response.ok) {
         return data;
       }
 
-      throw new Error(response.statusText);
+      throw new Error(data?.detail || response.statusText);
     } catch (e) {
+      console.log(e);
       if (e instanceof Error) {
         console.log("[ERROR]: ", e.message);
       }

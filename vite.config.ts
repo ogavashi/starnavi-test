@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
@@ -14,6 +16,11 @@ export default defineConfig({
     }),
     svgr(),
   ],
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./tests/setup.js",
+  },
   optimizeDeps: {
     include: ["@emotion/react", "@emotion/styled", "@mui/material/Tooltip"],
   },

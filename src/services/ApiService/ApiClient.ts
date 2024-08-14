@@ -78,7 +78,6 @@ export default class ApiClient {
 
       throw new Error(data?.detail || response.statusText);
     } catch (e) {
-      console.log(e);
       if (e instanceof Error) {
         console.log("[ERROR]: ", e.message);
       }

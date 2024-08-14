@@ -1,0 +1,5 @@
+export const NODES_DIMENSION = {
+  GAP: 50,
+  FILM_WIDTH: 300,
+  STARSHIP_WIDTH: 300,
+};
